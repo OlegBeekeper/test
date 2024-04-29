@@ -1,0 +1,19 @@
+name: AWS Auto Scaling Group Deployment
+
+on:
+  repository_dispatch:
+    types: [trigger-workflow]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install AWS CLI
+      run: |
+        echo "ok"
+
+
