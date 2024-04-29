@@ -1,8 +1,12 @@
 name: AWS Auto Scaling Group Deployment
 
 on:
+  push:
+    branches:
+      - main
   repository_dispatch:
     types: [trigger-workflow]
+
 
 jobs:
   deploy:
